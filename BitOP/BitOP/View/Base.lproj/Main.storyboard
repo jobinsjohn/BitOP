@@ -333,7 +333,7 @@
                                 <rect key="frame" x="0.0" y="113" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="traderCellID" id="2Qe-Ka-dd2">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="traderCellID" id="2Qe-Ka-dd2" customClass="BitOPListerTableViewCell" customModule="BitOP" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Qe-Ka-dd2" id="bn9-BT-q82">
@@ -389,8 +389,19 @@
                                                 <constraint firstItem="KX7-P3-6nD" firstAttribute="centerY" secondItem="bn9-BT-q82" secondAttribute="centerY" id="r4D-63-4eY"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="changePerLblOutlet" destination="4I0-VP-wG7" id="nz3-S8-8o8"/>
+                                            <outlet property="currNameLblOutlet" destination="KX7-P3-6nD" id="WYv-Yn-OBD"/>
+                                            <outlet property="priceLblOutlet" destination="lJW-6V-mCB" id="bsO-cu-dL1"/>
+                                            <outlet property="traderRateImgViewOutlet" destination="74e-aU-XS1" id="wus-0y-ey7"/>
+                                            <outlet property="volumeTradedLblOutlet" destination="Kd1-WY-dvg" id="0VK-Jg-Lg1"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="6cC-gV-acp" id="vIR-Md-yGa"/>
+                                    <outlet property="delegate" destination="6cC-gV-acp" id="8eV-8M-06E"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -411,6 +422,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CCj-Mp-0sY"/>
                     </view>
+                    <connections>
+                        <outlet property="signOutBtnOutlet" destination="SLy-jy-bBU" id="E9Q-mP-8M9"/>
+                        <outlet property="themeSwitcherSegControlOutlet" destination="7bD-Uk-1zw" id="0Hc-EC-heO"/>
+                        <outlet property="tradeListerTableViewOutlet" destination="XBi-z8-ena" id="gSV-KC-3Ds"/>
+                        <outlet property="traderNoBtnOutlet" destination="aXv-by-xRN" id="yQH-od-T8v"/>
+                        <outlet property="traderNoTxtFieldOutlet" destination="aYU-83-frN" id="Dpa-14-KgT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KJR-2F-lRU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
