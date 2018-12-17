@@ -68,6 +68,7 @@ class BitOPLoginVC: UIViewController {
     }
     
     @IBAction func loginBtnAction(_ sender: Any) {
+        performSegue(withIdentifier: "loginToTraderSegue", sender: nil)
     }
     
     @IBAction func loginRegBtnAction(_ sender: Any) {
