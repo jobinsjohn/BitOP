@@ -8,8 +8,8 @@ target 'BitOP' do
   # Pods for BitOP
 
 	pod 'Starscream', '~> 3.0.2'
-	pod 'KeychainAccess'
-	pod 'NotificationBannerSwift'
+	pod 'KeychainAccess', '~> 3.1.2'
+	pod 'NotificationBannerSwift', '~> 1.8.0'
 
   target 'BitOPTests' do
     inherit! :search_paths
