@@ -35,7 +35,7 @@ class BitOPLoginVC: UIViewController {
         
         // Do any additional setup after loading the view.
         
-        self.setupHideKeyboardOnTap()
+        self.hideKeyboard()
     }
     override func viewWillAppear(_ animated: Bool) {
         DispatchQueue.main.async{
