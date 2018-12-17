@@ -1,0 +1,6 @@
+framework module Pods_BitOP {
+  umbrella header "Pods-BitOP-umbrella.h"
+
+  export *
+  module * { export * }
+}
