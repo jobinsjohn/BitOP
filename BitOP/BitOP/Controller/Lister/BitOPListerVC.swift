@@ -15,7 +15,15 @@ class BitOPListerVC: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    // MARK: - UI functions
     
+    // MARK: - Custom functions
+    
+    // MARK: - Button Action
+    
+    // MARK: - Table View Delegates
+    
+    // MARK: - API Calls
 
     /*
     // MARK: - Navigation
