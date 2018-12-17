@@ -19,12 +19,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BitOP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCo-BS-YNL">
-                                <rect key="frame" x="15" y="313.5" width="345" height="60"/>
+                                <rect key="frame" x="15" y="293.5" width="345" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="FEq-aB-Rpc"/>
+                                    <constraint firstAttribute="height" constant="100" id="FEq-aB-Rpc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="85"/>
+                                <color key="textColor" red="0.08266625003256789" green="0.26475776539379015" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
