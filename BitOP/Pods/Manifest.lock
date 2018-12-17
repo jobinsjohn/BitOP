@@ -8,8 +8,8 @@ PODS:
   - Starscream (3.0.6)
 
 DEPENDENCIES:
-  - KeychainAccess
-  - NotificationBannerSwift
+  - KeychainAccess (~> 3.1.2)
+  - NotificationBannerSwift (~> 1.8.0)
   - Starscream (~> 3.0.2)
 
 SPEC REPOS:
@@ -27,6 +27,6 @@ SPEC CHECKSUMS:
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
   Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
 
-PODFILE CHECKSUM: b5211965b6c73d42894c601f7a65812b7f108ac6
+PODFILE CHECKSUM: d45b3929efb5389a5da0b9f333ff9e26d60f7111
 
 COCOAPODS: 1.5.3
