@@ -40,7 +40,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BitOP Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ld2-05-aQF">
                                         <rect key="frame" x="5" y="14.5" width="333" height="21"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="1" green="0.15718289520000001" blue="0.193692804" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -128,6 +128,12 @@
                                     <constraint firstItem="38Q-tx-ra9" firstAttribute="top" secondItem="wch-tM-2bD" secondAttribute="top" constant="30" id="yty-se-c7N"/>
                                     <constraint firstItem="pKD-Gc-97g" firstAttribute="top" secondItem="onp-Db-HN2" secondAttribute="bottom" constant="8" id="zP7-fn-ZxS"/>
                                 </constraints>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="38Q-tx-ra9"/>
+                                        <include reference="onp-Db-HN2"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MK4-qV-Y8u">
                                 <rect key="frame" x="16" y="448.5" width="343" height="50"/>
@@ -136,7 +142,7 @@
                                         <rect key="frame" x="71.5" y="8" width="200" height="34"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="9av-oS-n2H"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="9av-oS-n2H"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <state key="normal" title="REGISTER">
@@ -248,7 +254,7 @@
                                         <rect key="frame" x="308" y="7" width="52" height="28"/>
                                         <color key="backgroundColor" red="0.082666250029999999" green="0.26475776540000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="52" id="SdI-MD-6ba"/>
+                                            <constraint firstAttribute="width" priority="750" constant="52" id="SdI-MD-6ba"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="Submit">
@@ -327,7 +333,7 @@
                                 <rect key="frame" x="0.0" y="113" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="2Qe-Ka-dd2">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="traderCellID" id="2Qe-Ka-dd2">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Qe-Ka-dd2" id="bn9-BT-q82">
@@ -424,7 +430,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BitOP Register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nQ-Yg-pwg">
                                         <rect key="frame" x="5" y="9.5" width="333" height="21"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="1" green="0.15718289520000001" blue="0.193692804" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -589,13 +595,26 @@
                                     <constraint firstItem="yer-rx-Wfi" firstAttribute="top" secondItem="Fg6-DN-rUN" secondAttribute="bottom" constant="30" id="v0k-3D-pfu"/>
                                     <constraint firstItem="JKJ-d6-Tli" firstAttribute="leading" secondItem="P9E-oh-ks1" secondAttribute="trailing" constant="5" id="wxA-DX-MIn"/>
                                 </constraints>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="G8T-a0-hQD"/>
+                                        <include reference="yer-rx-Wfi"/>
+                                        <include reference="GzQ-YE-dXy"/>
+                                        <include reference="Fg6-DN-rUN"/>
+                                        <include reference="sdL-UC-efq"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uq5-wJ-VPa">
                                 <rect key="frame" x="15" y="516.5" width="345" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0T-hF-YXC">
                                         <rect key="frame" x="50" y="5" width="100" height="30"/>
-                                        <state key="normal" title="Cancel"/>
+                                        <color key="backgroundColor" red="0.082666250029999999" green="0.26475776540000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="regCancelBtnAction:" destination="r4w-e5-fAZ" eventType="touchUpInside" id="u5T-UB-ltE"/>
                                         </connections>
@@ -609,7 +628,11 @@
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Qi-73-4da">
                                         <rect key="frame" x="195" y="5" width="100" height="30"/>
-                                        <state key="normal" title="Register"/>
+                                        <color key="backgroundColor" red="0.082666250029999999" green="0.26475776540000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="Register">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="regSubmitBtnAction:" destination="r4w-e5-fAZ" eventType="touchUpInside" id="BZQ-ew-fQu"/>
                                         </connections>
@@ -620,9 +643,11 @@
                                     <constraint firstItem="r0T-hF-YXC" firstAttribute="top" secondItem="Uq5-wJ-VPa" secondAttribute="top" constant="5" id="0hp-yi-ft2"/>
                                     <constraint firstAttribute="bottom" secondItem="r0T-hF-YXC" secondAttribute="bottom" constant="5" id="3gH-nd-fwn"/>
                                     <constraint firstItem="0w3-Gv-JQF" firstAttribute="centerX" secondItem="Uq5-wJ-VPa" secondAttribute="centerX" id="54Y-it-AZC"/>
+                                    <constraint firstItem="0w3-Gv-JQF" firstAttribute="centerX" secondItem="Uq5-wJ-VPa" secondAttribute="centerX" id="9lK-ac-8ep"/>
                                     <constraint firstItem="r0T-hF-YXC" firstAttribute="leading" secondItem="Uq5-wJ-VPa" secondAttribute="leading" constant="50" id="DXZ-xW-5AZ"/>
                                     <constraint firstAttribute="bottom" secondItem="5Qi-73-4da" secondAttribute="bottom" constant="5" id="EsM-Yi-QI8"/>
                                     <constraint firstItem="5Qi-73-4da" firstAttribute="top" secondItem="Uq5-wJ-VPa" secondAttribute="top" constant="5" id="b5K-Z1-Fka"/>
+                                    <constraint firstItem="0w3-Gv-JQF" firstAttribute="centerY" secondItem="Uq5-wJ-VPa" secondAttribute="centerY" id="dtV-9d-7Zx"/>
                                     <constraint firstItem="0w3-Gv-JQF" firstAttribute="leading" secondItem="r0T-hF-YXC" secondAttribute="trailing" constant="20" id="e97-Ew-7CU"/>
                                     <constraint firstAttribute="trailing" secondItem="5Qi-73-4da" secondAttribute="trailing" constant="50" id="fLy-pk-Sp6"/>
                                     <constraint firstItem="5Qi-73-4da" firstAttribute="leading" secondItem="0w3-Gv-JQF" secondAttribute="trailing" constant="20" id="fiA-QF-jWF"/>
@@ -630,6 +655,12 @@
                                     <constraint firstAttribute="height" constant="40" id="vxJ-hX-vAL"/>
                                     <constraint firstAttribute="bottom" secondItem="0w3-Gv-JQF" secondAttribute="bottom" id="wgd-zu-tRN"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="54Y-it-AZC"/>
+                                        <exclude reference="dtV-9d-7Zx"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -655,13 +686,18 @@
                     <connections>
                         <outlet property="regBtnHolderViewOutlet" destination="Uq5-wJ-VPa" id="um0-Jm-laD"/>
                         <outlet property="regCancelBtnOutlet" destination="r0T-hF-YXC" id="8u9-V6-mj4"/>
+                        <outlet property="regConfirmPassLblOutlet" destination="pLO-kG-uCE" id="8i6-X1-wtK"/>
                         <outlet property="regConfirmPassTxtFieldOutlet" destination="GzQ-YE-dXy" id="ary-7H-ttj"/>
+                        <outlet property="regEmailErrorLabelOutlet" destination="VnX-Wo-n6R" id="1o8-bH-eoS"/>
                         <outlet property="regEmailTxtFieldOutlet" destination="yer-rx-Wfi" id="QKt-x9-UeX"/>
                         <outlet property="regHeadContainerViewOutlet" destination="Nzp-fC-bcH" id="Yxz-2d-i6h"/>
                         <outlet property="regMasterContainerViewOutlet" destination="0gP-I5-9A0" id="XGv-98-Arl"/>
+                        <outlet property="regNameErrorLblOutlet" destination="34Q-uc-CEa" id="TxB-FM-Cyl"/>
                         <outlet property="regNameTxtFieldOutlet" destination="G8T-a0-hQD" id="MCb-Hh-ot6"/>
+                        <outlet property="regPassErrorLblOutlet" destination="eME-i7-rNk" id="ned-fP-Nfv"/>
                         <outlet property="regPassTxtFieldOutlet" destination="sdL-UC-efq" id="8ny-65-Qml"/>
                         <outlet property="regRegisterBtnOutlet" destination="5Qi-73-4da" id="4pP-K8-Nzv"/>
+                        <outlet property="regUNameErrorLblOutlet" destination="A1l-27-OtC" id="ytY-di-dqk"/>
                         <outlet property="regUserNameTxtFieldOutlet" destination="Fg6-DN-rUN" id="7BU-wM-o5v"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="regToLoginSegue" id="ra0-wZ-Whw"/>
                     </connections>
@@ -672,7 +708,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Q6o-As-KZd"/>
         <segue reference="ra0-wZ-Whw"/>
     </inferredMetricsTieBreakers>
 </document>

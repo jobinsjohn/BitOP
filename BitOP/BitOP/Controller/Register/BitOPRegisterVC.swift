@@ -30,15 +30,29 @@ class BitOPRegisterVC: UIViewController {
     
     @IBOutlet weak var regRegisterBtnOutlet: UIButton!
     
+    @IBOutlet weak var regNameErrorLblOutlet: UILabel!
+    
+    @IBOutlet weak var regUNameErrorLblOutlet: UILabel!
+    
+    @IBOutlet weak var regEmailErrorLabelOutlet: UILabel!
+    
+    @IBOutlet weak var regPassErrorLblOutlet: UILabel!
+    
+    @IBOutlet weak var regConfirmPassLblOutlet: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //self.initRegisterUI()
         // Do any additional setup after loading the view.
+        self.setupHideKeyboardOnTap()
     }
     override func viewWillAppear(_ animated: Bool) {
-        self.initRegisterUI()
+        
+        DispatchQueue.main.async{
+            self.initRegisterUI()
+        }
+        self.clearRegFieldValues()
     }
     
     // MARK: - UI functions
@@ -51,17 +65,30 @@ class BitOPRegisterVC: UIViewController {
          self.regMasterContainerViewOutlet.roundedAllCorner()
          
          self.regBtnHolderViewOutlet.roundedAllCorner()
-         
-         self.regNameTxtFieldOutlet.text = ""
-         
-         self.regUserNameTxtFieldOutlet.text = ""
-         
-         self.regEmailTxtFieldOutlet.text = ""
-         
-         self.regPassTxtFieldOutlet.text = ""
-         
-         self.regConfirmPassTxtFieldOutlet.text = ""
         
+    }
+    
+    func clearRegFieldValues()
+    {
+        self.regNameTxtFieldOutlet.text = ""
+        
+        self.regUserNameTxtFieldOutlet.text = ""
+        
+        self.regEmailTxtFieldOutlet.text = ""
+        
+        self.regPassTxtFieldOutlet.text = ""
+        
+        self.regConfirmPassTxtFieldOutlet.text = ""
+        
+        self.regNameErrorLblOutlet.text = ""
+        
+        self.regUNameErrorLblOutlet.text = ""
+        
+        self.regEmailErrorLabelOutlet.text = ""
+        
+        self.regPassErrorLblOutlet.text = ""
+        
+        self.regConfirmPassLblOutlet.text = ""
     }
     
     // MARK: - Custom functions

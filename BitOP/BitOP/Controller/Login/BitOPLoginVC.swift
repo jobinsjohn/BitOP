@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 import KeychainAccess
 
 class BitOPLoginVC: UIViewController {
@@ -31,11 +32,16 @@ class BitOPLoginVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+        
+        self.setupHideKeyboardOnTap()
     }
     override func viewWillAppear(_ animated: Bool) {
-        self.initLoginViewUI()
+        DispatchQueue.main.async{
+            self.initLoginViewUI()
+        }
+        self.clearLoginFieldValues()
     }
     
     // MARK: - UI functions
@@ -45,17 +51,20 @@ class BitOPLoginVC: UIViewController {
         self.loginHeadContainerViewOutlet.roundedAllCorner()
         self.loginMasterContainerViewOutlet.roundedAllCorner()
         self.loginBottomContainerViewOutet.roundedAllCorner()
+    }
+    func clearLoginFieldValues()
+    {
         self.loginPassTxtFieldOutlet.text = ""
         self.loginUserNameTxtFieldOutlet.text = ""
     }
+    
     
     // MARK: - Custom functions
     
     // MARK: - Button Action
     
     @IBAction func loginCancelBtnAction(_ sender: Any) {
-        self.loginPassTxtFieldOutlet.text = ""
-        self.loginUserNameTxtFieldOutlet.text = ""
+        self.clearLoginFieldValues()
     }
     
     @IBAction func loginBtnAction(_ sender: Any) {
