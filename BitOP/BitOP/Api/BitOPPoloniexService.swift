@@ -8,10 +8,11 @@
 
 import Foundation
 import Starscream
+import NotificationBannerSwift
 
 protocol BitPoloniexServiceListenerProtocol {
     var objectID : Int! {get}
-    func receivedUpdates(_ scrip:Scrip)
+    func receivedUpdates(_ scrip:CurrencyModel)
 }
 
 class BitOPPoloniexService {
@@ -24,10 +25,16 @@ class BitOPPoloniexService {
         //websocketDidConnect
         socket.onConnect = {
             self.socket.write(string: "{\"command\":\"subscribe\",\"channel\":\"1002\"}")
-            print("websocket is connected")
+            let banner = StatusBarNotificationBanner(title: "Connected", style: .success)
+            banner.dismiss()
+            banner.show()
+            //print("websocket is connected")
         }
         //websocketDidDisconnect
         socket.onDisconnect = { (error: Error?) in
+            let banner = StatusBarNotificationBanner(title: "Diconnected", style: .danger)
+            banner.dismiss()
+            banner.show()
             print("websocket is disconnected: \(error?.localizedDescription ?? "")")
         }
         //websocketDidReceiveMessage
@@ -45,13 +52,23 @@ class BitOPPoloniexService {
                         tickerinfo.append("\(newI)")
                     }
                 }
-                let newScrip = Scrip.init(id: Int(tickerinfo[0]) ?? 0, last: tickerinfo[1], lowestAsk: tickerinfo[2], highestBid: tickerinfo[3], percentChange: tickerinfo[4], baseVolume: tickerinfo[5], quoteVolume: tickerinfo[6], isFrozen: tickerinfo[7], high24hr: tickerinfo[8], low24hr: tickerinfo[9])
+                let newScrip = CurrencyModel.init(id: Int(tickerinfo[0]) ?? 0,
+                                          lastTradePrice: tickerinfo[1],
+                                          lowestAsk: tickerinfo[2],
+                                          highestBid: tickerinfo[3],
+                                          percentChange: tickerinfo[4],
+                                          baseVolume: tickerinfo[5],
+                                          quoteVolume: tickerinfo[6],
+                                          isFrozen: tickerinfo[7],
+                                          high24hr: tickerinfo[8],
+                                          low24hr: tickerinfo[9])
+                print(newScrip)
                 self.notifyObservers(updates:newScrip)
             }
         }
         //websocketDidReceiveData
         socket.onData = { (data: Data) in
-            print("got some data: \(data.count)")
+            print("Data Received : \(data.count)")
         }
     }
     func subscribe(_ observer:BitPoloniexServiceListenerProtocol){
@@ -68,7 +85,7 @@ class BitOPPoloniexService {
             socket.disconnect()
         }
     }
-    func notifyObservers(updates scrip:Scrip) {
+    func notifyObservers(updates scrip:CurrencyModel) {
         for (_,observer) in observers {
             observer.receivedUpdates(scrip)
         }
