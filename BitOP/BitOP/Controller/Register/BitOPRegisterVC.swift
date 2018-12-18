@@ -65,10 +65,38 @@ class BitOPRegisterVC: UIViewController {
     {
 
          self.regHeadContainerViewOutlet.roundedAllCorner()
-         
          self.regMasterContainerViewOutlet.roundedAllCorner()
-         
          self.regBtnHolderViewOutlet.roundedAllCorner()
+        
+        self.regNameTxtFieldOutlet.layer.borderWidth = CGFloat(APP_MAIN_TEXTFIELD_BORDER_WIDTH)
+        self.regUserNameTxtFieldOutlet.layer.borderWidth = CGFloat(APP_MAIN_TEXTFIELD_BORDER_WIDTH)
+        self.regEmailTxtFieldOutlet.layer.borderWidth = CGFloat(APP_MAIN_TEXTFIELD_BORDER_WIDTH)
+        self.regPassTxtFieldOutlet.layer.borderWidth = CGFloat(APP_MAIN_TEXTFIELD_BORDER_WIDTH)
+        self.regConfirmPassTxtFieldOutlet.layer.borderWidth = CGFloat(APP_MAIN_TEXTFIELD_BORDER_WIDTH)
+        
+        self.regNameTxtFieldOutlet.layer.borderColor = (UIColor(hexString: APP_MAIN_TEXTFIELD_BORDER_COLOR)).cgColor
+        self.regUserNameTxtFieldOutlet.layer.borderColor = (UIColor(hexString: APP_MAIN_TEXTFIELD_BORDER_COLOR)).cgColor
+        self.regEmailTxtFieldOutlet.layer.borderColor = (UIColor(hexString: APP_MAIN_TEXTFIELD_BORDER_COLOR)).cgColor
+        self.regPassTxtFieldOutlet.layer.borderColor = (UIColor(hexString: APP_MAIN_TEXTFIELD_BORDER_COLOR)).cgColor
+        self.regConfirmPassTxtFieldOutlet.layer.borderColor = (UIColor(hexString: APP_MAIN_TEXTFIELD_BORDER_COLOR)).cgColor
+        
+        self.regNameTxtFieldOutlet.textColor = UIColor(hexString: APP_MAIN_TEXTFIELD_TEXT_COLOR)
+        self.regUserNameTxtFieldOutlet.textColor = UIColor(hexString: APP_MAIN_TEXTFIELD_TEXT_COLOR)
+        self.regEmailTxtFieldOutlet.textColor = UIColor(hexString: APP_MAIN_TEXTFIELD_TEXT_COLOR)
+        self.regPassTxtFieldOutlet.textColor = UIColor(hexString: APP_MAIN_TEXTFIELD_TEXT_COLOR)
+        self.regConfirmPassTxtFieldOutlet.textColor = UIColor(hexString: APP_MAIN_TEXTFIELD_TEXT_COLOR)
+        
+        self.regNameTxtFieldOutlet.attributedPlaceholder = NSAttributedString(string: "Full Name", attributes: [NSAttributedString.Key.foregroundColor: UIColor(hexString: APP_MAIN_TEXTFIELD_PLACEHOLDER_COLOR)])
+        self.regUserNameTxtFieldOutlet.attributedPlaceholder = NSAttributedString(string: "Desired User Name", attributes: [NSAttributedString.Key.foregroundColor: UIColor(hexString: APP_MAIN_TEXTFIELD_PLACEHOLDER_COLOR)])
+        self.regEmailTxtFieldOutlet.attributedPlaceholder = NSAttributedString(string: "Email", attributes: [NSAttributedString.Key.foregroundColor: UIColor(hexString: APP_MAIN_TEXTFIELD_PLACEHOLDER_COLOR)])
+        self.regPassTxtFieldOutlet.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor(hexString: APP_MAIN_TEXTFIELD_PLACEHOLDER_COLOR)])
+        self.regConfirmPassTxtFieldOutlet.attributedPlaceholder = NSAttributedString(string: "Confirm Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor(hexString: APP_MAIN_TEXTFIELD_PLACEHOLDER_COLOR)])
+        
+        self.regNameTxtFieldOutlet.paddingLeft = CGFloat(APP_MAIN_TEXTFIELD_PLACEHOLDER_LEFT_PADDING)
+        self.regUserNameTxtFieldOutlet.paddingLeft = CGFloat(APP_MAIN_TEXTFIELD_PLACEHOLDER_LEFT_PADDING)
+        self.regEmailTxtFieldOutlet.paddingLeft = CGFloat(APP_MAIN_TEXTFIELD_PLACEHOLDER_LEFT_PADDING)
+        self.regPassTxtFieldOutlet.paddingLeft = CGFloat(APP_MAIN_TEXTFIELD_PLACEHOLDER_LEFT_PADDING)
+        self.regConfirmPassTxtFieldOutlet.paddingLeft = CGFloat(APP_MAIN_TEXTFIELD_PLACEHOLDER_LEFT_PADDING)
         
     }
     
