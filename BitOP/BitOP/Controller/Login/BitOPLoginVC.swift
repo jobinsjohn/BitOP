@@ -78,6 +78,23 @@ class BitOPLoginVC: UIViewController {
     
     // MARK: - View Delegates
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        let textTag = textField.tag+1
+        let nextResponder = textField.superview?.viewWithTag(textTag) as UIResponder?
+        if(nextResponder != nil)
+        {
+            //textField.resignFirstResponder()
+            nextResponder?.becomeFirstResponder()
+        }
+        else{
+            // stop editing on pressing the done button on the last text field.
+            
+            self.view.endEditing(true)
+        }
+        return true
+    }
+    
     // MARK: - API Calls
 
     /*

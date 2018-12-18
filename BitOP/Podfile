@@ -11,7 +11,9 @@ target 'BitOP' do
 	pod 'KeychainAccess', '~> 3.1.2'
 	pod 'NotificationBannerSwift', '~> 1.8.0'
 	pod 'IQKeyboardManagerSwift', '~> 6.2.0'
-  target 'BitOPTests' do
+	pod 'SwiftValidator'
+ 
+ target 'BitOPTests' do
     inherit! :search_paths
     # Pods for testing
   end
