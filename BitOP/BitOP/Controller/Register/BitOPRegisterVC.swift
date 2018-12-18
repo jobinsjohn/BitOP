@@ -103,7 +103,24 @@ class BitOPRegisterVC: UIViewController {
         performSegue(withIdentifier: "regToLoginSegue", sender: nil)
     }
     
-    // MARK: - Table View Delegates
+    // MARK: - Delegates
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        let textTag = textField.tag+1
+        let nextResponder = textField.superview?.viewWithTag(textTag) as UIResponder?
+        if(nextResponder != nil)
+        {
+            //textField.resignFirstResponder()
+            nextResponder?.becomeFirstResponder()
+        }
+        else{
+            // stop editing on pressing the done button on the last text field.
+            
+            self.view.endEditing(true)
+        }
+        return true
+    }
     
     // MARK: - API Calls
 
