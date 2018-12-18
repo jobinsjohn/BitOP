@@ -59,6 +59,18 @@ class BitOPLoginVC: UIViewController, UITextFieldDelegate {
         self.loginHeadContainerViewOutlet.roundedAllCorner()
         self.loginMasterContainerViewOutlet.roundedAllCorner()
         self.loginBottomContainerViewOutet.roundedAllCorner()
+        
+        self.loginUserNameTxtFieldOutlet.layer.borderWidth = CGFloat(APP_MAIN_TEXTFIELD_BORDER_WIDTH)
+        self.loginPassTxtFieldOutlet.layer.borderWidth = CGFloat(APP_MAIN_TEXTFIELD_BORDER_WIDTH)
+        self.loginUserNameTxtFieldOutlet.layer.borderColor = (UIColor(hexString: APP_MAIN_TEXTFIELD_BORDER_COLOR)).cgColor
+        self.loginPassTxtFieldOutlet.layer.borderColor = (UIColor(hexString: APP_MAIN_TEXTFIELD_BORDER_COLOR)).cgColor
+        self.loginUserNameTxtFieldOutlet.textColor = UIColor(hexString: APP_MAIN_TEXTFIELD_TEXT_COLOR)
+        self.loginPassTxtFieldOutlet.textColor = UIColor(hexString: APP_MAIN_TEXTFIELD_TEXT_COLOR)
+        self.loginUserNameTxtFieldOutlet.attributedPlaceholder = NSAttributedString(string: "User Name", attributes: [NSAttributedString.Key.foregroundColor: UIColor(hexString: APP_MAIN_TEXTFIELD_PLACEHOLDER_COLOR)])
+        self.loginPassTxtFieldOutlet.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor(hexString: APP_MAIN_TEXTFIELD_PLACEHOLDER_COLOR)])
+        self.loginUserNameTxtFieldOutlet.paddingLeft = CGFloat(APP_MAIN_TEXTFIELD_PLACEHOLDER_LEFT_PADDING)
+        self.loginPassTxtFieldOutlet.paddingLeft = CGFloat(APP_MAIN_TEXTFIELD_PLACEHOLDER_LEFT_PADDING)
+        
     }
     func clearLoginFieldValues()
     {

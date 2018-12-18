@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		4166A679E945BBF08CD77C29 /* Pods_BitOP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0787DBF86DCF5A770C0A5E74 /* Pods_BitOP.framework */; };
 		43313D5A21C8DADB00B71D22 /* BitOPTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43313D5921C8DADB00B71D22 /* BitOPTheme.swift */; };
+		43313D5D21C90D9300B71D22 /* BitOpConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43313D5C21C90D9300B71D22 /* BitOpConstants.swift */; };
+		43313D5F21C90EE700B71D22 /* UiColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43313D5E21C90EE700B71D22 /* UiColor+Extensions.swift */; };
+		43313D6121C90F3300B71D22 /* UiTextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43313D6021C90F3300B71D22 /* UiTextField+Extensions.swift */; };
 		4379522121C6755C003A5674 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4379522021C6755C003A5674 /* AppDelegate.swift */; };
 		4379522621C6755C003A5674 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4379522421C6755C003A5674 /* Main.storyboard */; };
 		4379522921C6755C003A5674 /* BitOP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4379522721C6755C003A5674 /* BitOP.xcdatamodeld */; };
@@ -51,6 +54,9 @@
 		12EE342CA74429DF8ECCD72F /* Pods-BitOP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitOP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitOP/Pods-BitOP.debug.xcconfig"; sourceTree = "<group>"; };
 		2C033666F2B498A52924F964 /* Pods-BitOPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitOPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitOPTests/Pods-BitOPTests.release.xcconfig"; sourceTree = "<group>"; };
 		43313D5921C8DADB00B71D22 /* BitOPTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitOPTheme.swift; sourceTree = "<group>"; };
+		43313D5C21C90D9300B71D22 /* BitOpConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitOpConstants.swift; sourceTree = "<group>"; };
+		43313D5E21C90EE700B71D22 /* UiColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiColor+Extensions.swift"; sourceTree = "<group>"; };
+		43313D6021C90F3300B71D22 /* UiTextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiTextField+Extensions.swift"; sourceTree = "<group>"; };
 		4379521D21C6755C003A5674 /* BitOP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitOP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4379522021C6755C003A5674 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4379522521C6755C003A5674 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -130,6 +136,14 @@
 			path = ColorScheme;
 			sourceTree = "<group>";
 		};
+		43313D5B21C90D7400B71D22 /* Global Constants */ = {
+			isa = PBXGroup;
+			children = (
+				43313D5C21C90D9300B71D22 /* BitOpConstants.swift */,
+			);
+			path = "Global Constants";
+			sourceTree = "<group>";
+		};
 		4379521421C6755C003A5674 = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +210,7 @@
 		4379525221C67577003A5674 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				43313D5B21C90D7400B71D22 /* Global Constants */,
 				43313D5821C8DAB600B71D22 /* ColorScheme */,
 				4379525421C675B6003A5674 /* ImageAssets */,
 				4379522421C6755C003A5674 /* Main.storyboard */,
@@ -228,6 +243,8 @@
 			children = (
 				43D35E2221C764B100E33A79 /* UiView+Extensions.swift */,
 				43D35E2D21C7891C00E33A79 /* UiViewController+Extensions.swift */,
+				43313D5E21C90EE700B71D22 /* UiColor+Extensions.swift */,
+				43313D6021C90F3300B71D22 /* UiTextField+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -495,15 +512,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43313D5D21C90D9300B71D22 /* BitOpConstants.swift in Sources */,
 				43313D5A21C8DADB00B71D22 /* BitOPTheme.swift in Sources */,
 				43D35E2C21C77F0800E33A79 /* BitOPListerVC.swift in Sources */,
 				43D35E3521C7A3C400E33A79 /* CurrencyModel.swift in Sources */,
 				43D35E2E21C7891C00E33A79 /* UiViewController+Extensions.swift in Sources */,
+				43313D5F21C90EE700B71D22 /* UiColor+Extensions.swift in Sources */,
 				43D35E2A21C77EEB00E33A79 /* BitOPRegisterVC.swift in Sources */,
 				4379522921C6755C003A5674 /* BitOP.xcdatamodeld in Sources */,
 				43D35E2821C77ED500E33A79 /* BitOPLoginVC.swift in Sources */,
 				43D35E3721C7A40700E33A79 /* Currency.swift in Sources */,
 				43D35E3021C796F600E33A79 /* BitOPListerTableViewCell.swift in Sources */,
+				43313D6121C90F3300B71D22 /* UiTextField+Extensions.swift in Sources */,
 				43D35E2321C764B100E33A79 /* UiView+Extensions.swift in Sources */,
 				43D35E3321C7A31500E33A79 /* BitOPPoloniexService.swift in Sources */,
 				4379522121C6755C003A5674 /* AppDelegate.swift in Sources */,
@@ -684,7 +704,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BitOP/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.jobins.BitOP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -699,7 +723,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BitOP/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.jobins.BitOP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -715,7 +743,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BitOPTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.jobins.BitOPTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -732,7 +764,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BitOPTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.jobins.BitOPTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -748,7 +784,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BitOPUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.jobins.BitOPUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -764,7 +804,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BitOPUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.jobins.BitOPUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
