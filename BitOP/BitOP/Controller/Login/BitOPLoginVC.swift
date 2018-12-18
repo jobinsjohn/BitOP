@@ -94,11 +94,21 @@ class BitOPLoginVC: UIViewController, UITextFieldDelegate {
     
     @IBAction func loginBtnAction(_ sender: Any) {
         
-        let keychain = Keychain(service: "me.jobins.BitOP").synchronizable(true).accessibility(.whenUnlocked)
-        if keychain["user"]?.lowercased() == self.loginUserNameTxtFieldOutlet.text?.lowercased() && keychain["password"] == self.loginPassTxtFieldOutlet.text {
-            validLogin()
-        }else{
-            alert(title: "Error!", message: "Wrong username or password!", actionTitle: "Retry", cancelTitle: nil) { (confirmed) in
+        if(self.loginUserNameTxtFieldOutlet.text != "" && self.loginPassTxtFieldOutlet.text != "")
+        {
+            
+            let keychain = Keychain(service: "me.jobins.BitOP").synchronizable(true).accessibility(.whenUnlocked)
+            if keychain["user"]?.lowercased() == self.loginUserNameTxtFieldOutlet.text?.lowercased() && keychain["password"] == self.loginPassTxtFieldOutlet.text {
+                validLogin()
+            }else{
+                alert(title: "Error!", message: "Wrong username or password!", actionTitle: "Retry", cancelTitle: nil) { (confirmed) in
+                    self.loginPassTxtFieldOutlet.becomeFirstResponder()
+                }
+            }
+        }
+        else
+        {
+            alert(title: "Error!", message: "Please fill all the fields!", actionTitle: "Retry", cancelTitle: nil) { (confirmed) in
                 self.loginPassTxtFieldOutlet.becomeFirstResponder()
             }
         }
