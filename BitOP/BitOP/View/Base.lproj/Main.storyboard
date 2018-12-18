@@ -220,20 +220,23 @@
                                         </connections>
                                     </segmentedControl>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLy-jy-bBU">
-                                        <rect key="frame" x="269" y="0.0" width="59" height="25"/>
+                                        <rect key="frame" x="295" y="2" width="48" height="21"/>
                                         <color key="backgroundColor" red="0.082666250029999999" green="0.26475776540000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
                                         <state key="normal" title="Sign Out">
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signOutBtnAction:" destination="6cC-gV-acp" eventType="touchUpInside" id="zuo-v0-3iE"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="SLy-jy-bBU" secondAttribute="bottom" id="5SY-WQ-Jt1"/>
-                                    <constraint firstItem="SLy-jy-bBU" firstAttribute="top" secondItem="8a0-rc-VX8" secondAttribute="top" id="Ng4-Ca-hWf"/>
+                                    <constraint firstAttribute="bottom" secondItem="SLy-jy-bBU" secondAttribute="bottom" constant="2" id="5SY-WQ-Jt1"/>
+                                    <constraint firstItem="SLy-jy-bBU" firstAttribute="top" secondItem="8a0-rc-VX8" secondAttribute="top" constant="2" id="Ng4-Ca-hWf"/>
                                     <constraint firstItem="7bD-Uk-1zw" firstAttribute="centerY" secondItem="8a0-rc-VX8" secondAttribute="centerY" id="RtN-7F-prg"/>
-                                    <constraint firstAttribute="trailing" secondItem="SLy-jy-bBU" secondAttribute="trailing" constant="15" id="V2z-rV-fR5"/>
+                                    <constraint firstAttribute="trailing" secondItem="SLy-jy-bBU" secondAttribute="trailing" id="V2z-rV-fR5"/>
                                     <constraint firstItem="SLy-jy-bBU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7bD-Uk-1zw" secondAttribute="trailing" constant="8" symbolic="YES" id="WFc-QW-ccM"/>
                                     <constraint firstItem="7bD-Uk-1zw" firstAttribute="centerX" secondItem="8a0-rc-VX8" secondAttribute="centerX" id="mp4-Ef-Mik"/>
                                     <constraint firstItem="7bD-Uk-1zw" firstAttribute="leading" secondItem="8a0-rc-VX8" secondAttribute="leading" constant="15" id="r20-jC-Xz6"/>
@@ -265,7 +268,6 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="signOutBtnAction:" destination="6cC-gV-acp" eventType="touchUpInside" id="cYw-E3-jq2"/>
                                             <action selector="userNoSubmitBtnAction:" destination="6cC-gV-acp" eventType="touchUpInside" id="Vls-zK-b8F"/>
                                         </connections>
                                     </button>
@@ -366,7 +368,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4I0-VP-wG7">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4I0-VP-wG7">
                                                     <rect key="frame" x="264.5" y="15" width="81.5" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -734,7 +736,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Q6o-As-KZd"/>
         <segue reference="ra0-wZ-Whw"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -7,14 +7,12 @@ PODS:
     - SnapKit (~> 4.0.1)
   - SnapKit (4.0.1)
   - Starscream (3.0.6)
-  - SwiftValidator (3.0.3)
 
 DEPENDENCIES:
   - IQKeyboardManagerSwift (~> 6.2.0)
   - KeychainAccess (~> 3.1.2)
   - NotificationBannerSwift (~> 1.8.0)
   - Starscream (~> 3.0.2)
-  - SwiftValidator
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -24,7 +22,6 @@ SPEC REPOS:
     - NotificationBannerSwift
     - SnapKit
     - Starscream
-    - SwiftValidator
 
 SPEC CHECKSUMS:
   IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
@@ -33,8 +30,7 @@ SPEC CHECKSUMS:
   NotificationBannerSwift: 49fc4be7fabada55b189b50e72184c92edd5f7f7
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
   Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
-  SwiftValidator: 0b6a48bf10364411b0d64c97f78665ff87ca9f8b
 
-PODFILE CHECKSUM: e98a13c78fa493935dfd410b939ec8b810511a55
+PODFILE CHECKSUM: 4baafd8ae37f345d72d8043ed1636eb99853ec1b
 
 COCOAPODS: 1.5.3

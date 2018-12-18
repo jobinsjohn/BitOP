@@ -10,7 +10,8 @@ import UIKit
 import Foundation
 import KeychainAccess
 
-class BitOPLoginVC: UIViewController {
+
+class BitOPLoginVC: UIViewController, UITextFieldDelegate {
     
     
     @IBOutlet weak var loginHeadContainerViewOutlet: UIView!
@@ -23,6 +24,9 @@ class BitOPLoginVC: UIViewController {
     
     @IBOutlet weak var loginPassTxtFieldOutlet: UITextField!
     
+    
+    
+    
     @IBOutlet weak var loginCancelBtnOutlet: UIButton!
     
     @IBOutlet weak var loginBtnOutet: UIButton!
@@ -34,6 +38,10 @@ class BitOPLoginVC: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        
+        self.loginPassTxtFieldOutlet.delegate          = self
+        
+        self.loginUserNameTxtFieldOutlet.delegate       = self
         
         self.hideKeyboard()
     }
@@ -61,6 +69,11 @@ class BitOPLoginVC: UIViewController {
     
     // MARK: - Custom functions
     
+    func validLogin()
+    {
+        performSegue(withIdentifier: "loginToTraderSegue", sender: nil)
+    }
+    
     // MARK: - Button Action
     
     @IBAction func loginCancelBtnAction(_ sender: Any) {
@@ -68,7 +81,16 @@ class BitOPLoginVC: UIViewController {
     }
     
     @IBAction func loginBtnAction(_ sender: Any) {
-        performSegue(withIdentifier: "loginToTraderSegue", sender: nil)
+        
+        let keychain = Keychain(service: "me.jobins.BitOP").synchronizable(true).accessibility(.whenUnlocked)
+        if keychain["user"]?.lowercased() == self.loginUserNameTxtFieldOutlet.text?.lowercased() && keychain["password"] == self.loginPassTxtFieldOutlet.text {
+            validLogin()
+        }else{
+            alert(title: "Error!", message: "Wrong username or password!", actionTitle: "Retry", cancelTitle: nil) { (confirmed) in
+                self.loginPassTxtFieldOutlet.becomeFirstResponder()
+            }
+        }
+        
     }
     
     @IBAction func loginRegBtnAction(_ sender: Any) {

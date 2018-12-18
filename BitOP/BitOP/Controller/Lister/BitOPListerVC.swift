@@ -8,6 +8,7 @@
 
 import UIKit
 import Starscream
+import NotificationBannerSwift
 
 class BitOPListerVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -42,6 +43,7 @@ class BitOPListerVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     }
 
     override func viewDidAppear(_ animated: Bool) {
+        self.navigationItem.setHidesBackButton(true, animated:true);
         BitOPPoloniexService.shared.subscribe(self)
     }
     // MARK: - UI functions
@@ -80,6 +82,12 @@ class BitOPListerVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     // MARK: - Button Action
     
     @IBAction func signOutBtnAction(_ sender: Any) {
+        BitOPPoloniexService.shared.unsubscribe(self)
+        let banner = StatusBarNotificationBanner(title: "Signed Out", style: .info)
+        banner.dismiss()
+        banner.show()
+        _ = navigationController?.popToRootViewController(animated: true)
+
     }
     
     @IBAction func userNoSubmitBtnAction(_ sender: Any) {

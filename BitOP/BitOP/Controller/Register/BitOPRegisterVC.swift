@@ -8,6 +8,10 @@
 
 import UIKit
 
+import Foundation
+
+import KeychainAccess
+
 class BitOPRegisterVC: UIViewController {
     
     @IBOutlet weak var regHeadContainerViewOutlet: UIView!
@@ -92,6 +96,26 @@ class BitOPRegisterVC: UIViewController {
     }
     
     // MARK: - Custom functions
+    @discardableResult
+    func verifyPasswordMatch() -> Bool
+    {
+        if regPassTxtFieldOutlet.text != regConfirmPassTxtFieldOutlet.text {
+            self.alert(title: "Error!", message: "Passwords don't match.", actionTitle: "Retry", cancelTitle: nil) { (confirmed) in
+                self.regPassTxtFieldOutlet.text = ""
+                self.regConfirmPassTxtFieldOutlet.text = ""
+                self.regPassTxtFieldOutlet.becomeFirstResponder()
+            }
+        }else if (regPassTxtFieldOutlet.text?.count ?? 0) < 8 {
+            alert(title: "Error!", message: "Password should be at least 8 alphanumeric phrase", actionTitle: "Retry", cancelTitle: nil) { (confirmed) in
+                self.regPassTxtFieldOutlet.text = ""
+                self.regConfirmPassTxtFieldOutlet.text = ""
+                self.regPassTxtFieldOutlet.becomeFirstResponder()
+            }
+        }else {
+            return true
+        }
+        return false
+    }
     
     // MARK: - Button Action
     
@@ -100,7 +124,22 @@ class BitOPRegisterVC: UIViewController {
     }
     
     @IBAction func regSubmitBtnAction(_ sender: Any) {
-        performSegue(withIdentifier: "regToLoginSegue", sender: nil)
+        //performSegue(withIdentifier: "regToLoginSegue", sender: nil)
+        if (verifyPasswordMatch())
+        {
+            let keychainObj = Keychain(service: "me.jobins.BitOP").synchronizable(true).accessibility(.whenUnlocked)
+            keychainObj["name"] = regNameTxtFieldOutlet.text
+            keychainObj["user"] = regUserNameTxtFieldOutlet.text
+            keychainObj["password"] = regPassTxtFieldOutlet.text
+            keychainObj["email"] = regEmailTxtFieldOutlet.text
+            alert(title: "Success!", message: "Account created successfully. Please login now", actionTitle: "Ok", cancelTitle: nil) { (confirmed) in
+                self.performSegue(withIdentifier: "regToLoginSegue", sender: nil)
+            }
+        }
+        
+    }
+    @IBAction func cancel(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
     // MARK: - Delegates
@@ -111,12 +150,10 @@ class BitOPRegisterVC: UIViewController {
         let nextResponder = textField.superview?.viewWithTag(textTag) as UIResponder?
         if(nextResponder != nil)
         {
-            //textField.resignFirstResponder()
             nextResponder?.becomeFirstResponder()
         }
         else{
             // stop editing on pressing the done button on the last text field.
-            
             self.view.endEditing(true)
         }
         return true
@@ -134,4 +171,36 @@ class BitOPRegisterVC: UIViewController {
     }
     */
 
+}
+extension UIViewController {
+    @discardableResult
+    func alert(title:String?,message:String?,actionTitle:String?,cancelTitle:String?,success:(((Bool)->Void)?))->UIAlertController {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        if actionTitle != nil {
+            let action = UIAlertAction(title: actionTitle, style: .default) { (action) in
+                success?(true)
+            }
+            alertController.addAction(action)
+        }
+        if cancelTitle != nil {
+            let cancel = UIAlertAction(title: cancelTitle, style: .cancel, handler: { (action) in
+                success?(false)
+            })
+            alertController.addAction(cancel)
+        }
+        DispatchQueue.main.async {
+            self.present(alertController,animated: false)
+        }
+        return alertController
+    }
+}
+extension String {
+    var isValidEmail : Bool {
+        get {
+            let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+            let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegex)
+            let isValid = emailTest.evaluate(with: self)
+            return isValid;
+        }
+    }
 }
