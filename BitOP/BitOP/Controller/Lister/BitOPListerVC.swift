@@ -35,25 +35,20 @@ class BitOPListerVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         self.tradeListerTableViewOutlet.delegate = self
         self.tradeListerTableViewOutlet.dataSource = self
         
-        debugPrint("Stock View VC loaded")
+        //debugPrint("Stock View VC loaded")
         currentTheme = BitOPColorTheme(backgroundColor: UIColor.black,foregroundColor: UIColor.white)
         self.hideKeyboard()
         
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
-        
-        //self.tradeListerTableViewOutlet.reloadData()
-       BitOPPoloniexService.shared.subscribe(self)
-        //self.tradeListerTableViewOutlet.reloadData()
-    }
+
     override func viewDidAppear(_ animated: Bool) {
-        //self.tradeListerTableViewOutlet.reloadData()
+        BitOPPoloniexService.shared.subscribe(self)
     }
     // MARK: - UI functions
     fileprivate func updateView() {
+        
         tradeListerTableViewOutlet.reloadData()
+        
         themeSwitcherSegControlOutlet.backgroundColor = currentTheme?.backgroundColor
         themeSwitcherSegControlOutlet.tintColor = currentTheme?.foregroundColor
         
@@ -69,32 +64,14 @@ class BitOPListerVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         signOutBtnOutlet.setTitleColor(currentTheme?.foregroundColor, for: .normal)
         signOutBtnOutlet.tintColor = currentTheme?.backgroundColor
         
+        traderNoBtnOutlet.setTitleColor(currentTheme?.foregroundColor, for: .normal)
+        traderNoBtnOutlet.tintColor = currentTheme?.backgroundColor
+        
         tradeListerTableViewOutlet.backgroundColor = currentTheme?.backgroundColor
+        
         view.backgroundColor = currentTheme?.backgroundColor
-//        headerView.backgroundColor = currentTheme?.backgroundColor
-//        for label in headerView.subviews {
-//            if let label = label as? UILabel {
-//                label.textColor = currentTheme?.foregroundColor
-//            }
-//        }
-//        tickInfoHUDView.backgroundColor = currentTheme?.backgroundColor
-//        for label in tickInfoHUDView.subviews {
-//            if let label = label as? UILabel {
-//                label.textColor = currentTheme?.foregroundColor
-//            }
-//        }
+
     }
-    // MARK: - Custom functions
-    
-//    fileprivate func updateScripInfo(with scrip:Scrip){
-//        UIView.animate(withDuration: 0.3) {
-//            self.hudHeightConstraint.constant = 65
-//        }
-//        dayChangeLabel.text = tick.percentChange
-//        dayHighLabel.text = tick.high24hr
-//        dayLowLabel.text = tick.low24hr
-//        dayVolume.text = tick.baseVolume
-//    }
     
     deinit {
         BitOPPoloniexService.shared.unsubscribe(self)
