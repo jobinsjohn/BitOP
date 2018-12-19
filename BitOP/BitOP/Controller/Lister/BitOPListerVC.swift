@@ -56,11 +56,20 @@ class BitOPListerVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
             banner.show()
         }
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        BitOPPoloniexService.shared.unsubscribe(self)
+    }
     // MARK: - UI functions
     fileprivate func updateView() {
         
         tradeListerTableViewOutlet.reloadData()
         
+        UIApplication.shared.statusBarView?.backgroundColor = currentTheme?.foregroundColor
+
+        navigationController?.navigationBar.barTintColor = currentTheme?.backgroundColor
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: currentTheme?.foregroundColor as Any]
+
         themeSwitcherSegControlOutlet.backgroundColor = currentTheme?.backgroundColor
         themeSwitcherSegControlOutlet.tintColor = currentTheme?.foregroundColor
         
@@ -81,7 +90,7 @@ class BitOPListerVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         
         tradeListerTableViewOutlet.backgroundColor = currentTheme?.backgroundColor
         
-        view.backgroundColor = currentTheme?.backgroundColor
+        self.view.backgroundColor = currentTheme?.backgroundColor
 
     }
     
@@ -174,7 +183,7 @@ extension BitOPListerVC : BitPoloniexServiceListenerProtocol {
             currenciesListObj[scrip.id] = scrip
             let indexPath = IndexPath(row: index, section: 0)
             if tradeListerTableViewOutlet.indexPathsForVisibleRows?.contains(indexPath) ?? false {
-                self.tradeListerTableViewOutlet.reloadRows(at: [indexPath], with: .automatic)
+                self.tradeListerTableViewOutlet.reloadRows(at: [indexPath], with: .fade)
             }
         }else{
             currenciesListObj[scrip.id] = scrip
