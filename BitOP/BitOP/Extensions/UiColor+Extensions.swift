@@ -7,7 +7,6 @@
 //
 
 import Foundation
-
 import UIKit
 
 extension UIColor
@@ -35,7 +34,6 @@ extension UIColor
         
         self.init(red:red, green:green, blue:blue, alpha:1)
     }
-    
     func toHexString() -> String
     {
         var r:CGFloat = 0
