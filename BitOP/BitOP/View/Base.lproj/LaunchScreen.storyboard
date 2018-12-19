@@ -27,11 +27,23 @@
                                 <color key="textColor" red="0.08266625003256789" green="0.26475776539379015" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright (c) 2018" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Put-d1-cE7">
+                                <rect key="frame" x="15" y="627" width="345" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="XDo-5X-n5L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                <color key="textColor" red="1" green="0.15718289520000001" blue="0.193692804" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Put-d1-cE7" secondAttribute="bottom" constant="15" id="7O6-AE-jHF"/>
                             <constraint firstItem="BCo-BS-YNL" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="CwP-93-MrM"/>
+                            <constraint firstItem="Put-d1-cE7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="MN8-3h-l2k"/>
                             <constraint firstItem="BCo-BS-YNL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="U7R-B7-evZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Put-d1-cE7" secondAttribute="trailing" constant="15" id="cOz-zN-oJm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BCo-BS-YNL" secondAttribute="trailing" constant="15" id="rY0-k3-Hx0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -39,7 +51,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
 </document>
