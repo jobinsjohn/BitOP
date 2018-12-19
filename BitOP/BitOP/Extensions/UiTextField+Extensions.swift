@@ -11,7 +11,6 @@ import UIKit
 
 @IBDesignable
 extension UITextField {
-    
     @IBInspectable var paddingLeft: CGFloat {
         get {
             return leftView!.frame.size.width
