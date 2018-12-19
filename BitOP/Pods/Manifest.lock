@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.8.0)
   - IQKeyboardManagerSwift (6.2.0)
   - KeychainAccess (3.1.2)
   - MarqueeLabel/Swift (3.2.0)
@@ -9,6 +10,7 @@ PODS:
   - Starscream (3.0.6)
 
 DEPENDENCIES:
+  - Alamofire
   - IQKeyboardManagerSwift (~> 6.2.0)
   - KeychainAccess (~> 3.1.2)
   - NotificationBannerSwift (~> 1.8.0)
@@ -16,6 +18,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - IQKeyboardManagerSwift
     - KeychainAccess
     - MarqueeLabel
@@ -24,6 +27,7 @@ SPEC REPOS:
     - Starscream
 
 SPEC CHECKSUMS:
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
   IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
   KeychainAccess: b3816fddcf28aa29d94b10ec305cd52be14c472b
   MarqueeLabel: 440a502b91a9179bd98f9fff00ba1150650a1c0e
@@ -31,6 +35,6 @@ SPEC CHECKSUMS:
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
   Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
 
-PODFILE CHECKSUM: 4baafd8ae37f345d72d8043ed1636eb99853ec1b
+PODFILE CHECKSUM: a12cbe25e448e1c0407d737216986cf7fa07eebe
 
 COCOAPODS: 1.5.3

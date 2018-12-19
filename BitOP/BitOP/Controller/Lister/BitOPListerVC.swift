@@ -9,6 +9,7 @@
 import UIKit
 import Starscream
 import NotificationBannerSwift
+import Alamofire
 
 class BitOPListerVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -44,7 +45,16 @@ class BitOPListerVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
 
     override func viewDidAppear(_ animated: Bool) {
         self.navigationItem.setHidesBackButton(true, animated:true);
-        BitOPPoloniexService.shared.subscribe(self)
+        if Connectivity.isConnectedToInternet {
+            print("Yes! internet is available.")
+            BitOPPoloniexService.shared.subscribe(self)
+        }
+        else
+        {
+            let banner = StatusBarNotificationBanner(title: "No Network Connection", style: .danger)
+            banner.dismiss()
+            banner.show()
+        }
     }
     // MARK: - UI functions
     fileprivate func updateView() {

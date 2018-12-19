@@ -12,6 +12,10 @@ import Foundation
 
 import KeychainAccess
 
+import Alamofire
+
+import NotificationBannerSwift
+
 class BitOPRegisterVC: UIViewController {
     
     @IBOutlet weak var regHeadContainerViewOutlet: UIView!
@@ -52,7 +56,15 @@ class BitOPRegisterVC: UIViewController {
         self.hideKeyboard()
     }
     override func viewWillAppear(_ animated: Bool) {
-        
+        if Connectivity.isConnectedToInternet {
+            print("Yes! internet is available.")
+        }
+        else
+        {
+            let banner = StatusBarNotificationBanner(title: "No Network Connection", style: .danger)
+            banner.dismiss()
+            banner.show()
+        }
         DispatchQueue.main.async{
             self.initRegisterUI()
         }
