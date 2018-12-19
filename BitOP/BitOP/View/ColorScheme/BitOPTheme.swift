@@ -9,13 +9,15 @@
 import Foundation
 import UIKit
 
-enum BitOPStyle : Int {
+enum BitOPStyle : Int
+{
     case dark = 0
     case light = 1
     case homeBrew = 2
 }
 
-struct BitOPColorTheme {
+struct BitOPColorTheme
+{
     var backgroundColor: UIColor?
     var foregroundColor: UIColor?
 }
