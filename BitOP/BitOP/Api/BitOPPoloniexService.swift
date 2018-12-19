@@ -1,5 +1,5 @@
 //
-//  BitOP_PoloniexService.swift
+//  BitOPPoloniexService.swift
 //  BitOP
 //
 //  Created by Jobins John on 12/17/18.
@@ -66,14 +66,14 @@ class BitOPPoloniexService {
                 self.notifyObservers(updates:newScrip)
             }
         }
-        //websocketDidReceiveData
+        //Received Data from server
         socket.onData = { (data: Data) in
             print("Data Received : \(data.count)")
         }
     }
     func subscribe(_ observer:BitPoloniexServiceListenerProtocol){
         if observers.count == 0 {
-            //start the server
+            //Connect the server
             socket.connect()
         }
         observers[observer.objectID] = observer
@@ -81,7 +81,7 @@ class BitOPPoloniexService {
     func unsubscribe(_ observer:BitPoloniexServiceListenerProtocol){
         observers[observer.objectID] = nil
         if observers.count == 0 {
-            //stop the server
+            //Disconnect the server
             socket.disconnect()
         }
     }
