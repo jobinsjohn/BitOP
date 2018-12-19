@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="-950" y="95"/>
         </scene>
-        <!--BitOP LoginVC-->
+        <!--BitOP Login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="BitOPLoginVC" customModule="BitOP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="BitOP Login" id="BYZ-38-t0r" customClass="BitOPLoginVC" customModule="BitOP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -194,10 +194,10 @@
             </objects>
             <point key="canvasLocation" x="-191.19999999999999" y="94.902548725637189"/>
         </scene>
-        <!--BitOP ListerVC-->
+        <!--BitOP LIster-->
         <scene sceneID="9YS-hR-Cv2">
             <objects>
-                <viewController id="6cC-gV-acp" customClass="BitOPListerVC" customModule="BitOP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="BitOP LIster" id="6cC-gV-acp" customClass="BitOPListerVC" customModule="BitOP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XI9-lx-zve">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -444,10 +444,10 @@
             </objects>
             <point key="canvasLocation" x="-191" y="834"/>
         </scene>
-        <!--BitOP RegisterVC-->
+        <!--Register-->
         <scene sceneID="k2a-Ib-6F5">
             <objects>
-                <viewController id="r4w-e5-fAZ" customClass="BitOPRegisterVC" customModule="BitOP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Register" id="r4w-e5-fAZ" customClass="BitOPRegisterVC" customModule="BitOP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="awW-gZ-Up9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
