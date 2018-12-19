@@ -43,25 +43,25 @@ class BitOPPoloniexService {
             guard let data = text.data(using: .utf8) else {return}
             let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [Any]
             guard let count = json??.count ,count > 2 else {return}
-            if let tickerinfoAny = json??[2] as? [Any] {
-                var tickerinfo = [String]()
-                for i in tickerinfoAny {
+            if let scripinfoObj = json??[2] as? [Any] {
+                var scripinfo = [String]()
+                for i in scripinfoObj {
                     if let newI = i as? String {
-                        tickerinfo.append(newI)
+                        scripinfo.append(newI)
                     }else if let newI = i as? Int {
-                        tickerinfo.append("\(newI)")
+                        scripinfo.append("\(newI)")
                     }
                 }
-                let newScrip = CurrencyModel.init(id: Int(tickerinfo[0]) ?? 0,
-                                          lastTradePrice: tickerinfo[1],
-                                          lowestAsk: tickerinfo[2],
-                                          highestBid: tickerinfo[3],
-                                          percentChange: tickerinfo[4],
-                                          baseVolume: tickerinfo[5],
-                                          quoteVolume: tickerinfo[6],
-                                          isFrozen: tickerinfo[7],
-                                          high24hr: tickerinfo[8],
-                                          low24hr: tickerinfo[9])
+                let newScrip = CurrencyModel.init(id: Int(scripinfo[0]) ?? 0,
+                                          lastTradePrice: scripinfo[1],
+                                          lowestAsk: scripinfo[2],
+                                          highestBid: scripinfo[3],
+                                          percentChange: scripinfo[4],
+                                          baseVolume: scripinfo[5],
+                                          quoteVolume: scripinfo[6],
+                                          isFrozen: scripinfo[7],
+                                          high24hr: scripinfo[8],
+                                          low24hr: scripinfo[9])
                 print(newScrip)
                 self.notifyObservers(updates:newScrip)
             }
