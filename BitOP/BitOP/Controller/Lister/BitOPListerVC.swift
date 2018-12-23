@@ -29,8 +29,8 @@ class BitOPListerVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         }
     }
     var currenciesListObj = [Int:CurrencyModel]()
-    
     var comparisonNumber: Double?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -40,7 +40,6 @@ class BitOPListerVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         //debugPrint("Stock View VC loaded")
         currentTheme = BitOPColorTheme(backgroundColor: UIColor.black,foregroundColor: UIColor.white)
         self.hideKeyboard()
-        
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -91,7 +90,6 @@ class BitOPListerVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         tradeListerTableViewOutlet.backgroundColor = currentTheme?.backgroundColor
         
         self.view.backgroundColor = currentTheme?.backgroundColor
-
     }
     
     deinit {
@@ -106,7 +104,6 @@ class BitOPListerVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         banner.dismiss()
         banner.show()
         _ = navigationController?.popToRootViewController(animated: true)
-
     }
     
     @IBAction func userNoSubmitBtnAction(_ sender: Any) {
@@ -141,7 +138,6 @@ class BitOPListerVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         return currenciesListObj.count
     }
     
-    
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let scripCell = tableView.dequeueReusableCell(withIdentifier: "traderCellID", for: indexPath) as? BitOPListerTableViewCell
@@ -152,7 +148,6 @@ class BitOPListerVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
      }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
         return 30.0;
     }
     
@@ -190,14 +185,9 @@ extension BitOPListerVC : BitPoloniexServiceListenerProtocol {
             self.tradeListerTableViewOutlet.reloadData()
         }
     }
-    
     var objectID: Int! {
         return self.hashValue
     }
-    
-//    func receivedUpdates(_ scrip: CurrencyModel) {
-//
-//    }
 }
 extension BitOPListerVC : UITextFieldDelegate {
     func updateTradeHighlight(){
