@@ -7,7 +7,6 @@
 //
 
 import Foundation
-
 import UIKit
 
 extension UIView{
@@ -93,5 +92,4 @@ extension UIView{
         maskLayer1.path = maskPath1.cgPath
         layer.mask = maskLayer1
     }
-    
 }
