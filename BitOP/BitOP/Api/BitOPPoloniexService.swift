@@ -62,7 +62,6 @@ class BitOPPoloniexService {
                                           isFrozen: scripinfo[7],
                                           high24hr: scripinfo[8],
                                           low24hr: scripinfo[9])
-                print(newScrip)
                 self.notifyObservers(updates:newScrip)
             }
         }
