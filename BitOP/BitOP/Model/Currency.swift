@@ -10,7 +10,6 @@ import Foundation
 
 class CurrencyName {
     static let shared = CurrencyName()
-    
     var currencyID = [
                 7:"BTC_BCN",
                 14:"BTC_BTS",
@@ -123,8 +122,7 @@ class CurrencyName {
                 225:"USDC_ETH",
                 235:"USDC_BCH",
                 237:"USDC_BCHABC",
-                239:"USDC_BCHSV"
-    ]
+                239:"USDC_BCHSV"]
     func currencyNameForID(id:Int) -> String {
         return self.currencyID[id] ?? "N/A"
     }
