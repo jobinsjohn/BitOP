@@ -35,13 +35,9 @@ class BitOPLoginVC: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
-        
         self.loginPassTxtFieldOutlet.delegate          = self
-        
         self.loginUserNameTxtFieldOutlet.delegate       = self
-        
         self.hideKeyboard()
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -85,8 +81,6 @@ class BitOPLoginVC: UIViewController, UITextFieldDelegate {
         self.loginPassTxtFieldOutlet.text = ""
         self.loginUserNameTxtFieldOutlet.text = ""
     }
-    
-    
     // MARK: - Custom functions
     
     func validLogin()
@@ -101,10 +95,8 @@ class BitOPLoginVC: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func loginBtnAction(_ sender: Any) {
-        
         if(self.loginUserNameTxtFieldOutlet.text != "" && self.loginPassTxtFieldOutlet.text != "")
         {
-            
             let keychain = Keychain(service: "me.jobins.BitOP").synchronizable(true).accessibility(.whenUnlocked)
             if keychain["user"]?.lowercased() == self.loginUserNameTxtFieldOutlet.text?.lowercased() && keychain["password"] == self.loginPassTxtFieldOutlet.text {
                 validLogin()
@@ -124,14 +116,12 @@ class BitOPLoginVC: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func loginRegBtnAction(_ sender: Any) {
-        
         performSegue(withIdentifier: "loginToRegSegue", sender: nil)
     }
     
     // MARK: - View Delegates
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
         let textTag = textField.tag+1
         let nextResponder = textField.superview?.viewWithTag(textTag) as UIResponder?
         if(nextResponder != nil)
@@ -158,5 +148,4 @@ class BitOPLoginVC: UIViewController, UITextFieldDelegate {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
