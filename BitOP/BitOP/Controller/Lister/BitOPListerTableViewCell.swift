@@ -20,17 +20,14 @@ class BitOPListerTableViewCell: UITableViewCell {
     
     @IBOutlet weak var traderRateImgViewOutlet: UIImageView!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
         debugPrint("Stock View Table loaded")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
     func configure(with scrip:CurrencyModel,  numberToCompare number:Double?, colorTheme:BitOPColorTheme?){
@@ -44,7 +41,6 @@ class BitOPListerTableViewCell: UITableViewCell {
         
         changePerLblOutlet.text = scrip.percentChange
         changePerLblOutlet.textColor = colorTheme?.foregroundColor
-        
 
         volumeTradedLblOutlet.text = scrip.quoteVolume
         volumeTradedLblOutlet.textColor = colorTheme?.foregroundColor
@@ -60,5 +56,4 @@ class BitOPListerTableViewCell: UITableViewCell {
             traderRateImgViewOutlet.image = nil
         }
     }
-
 }
