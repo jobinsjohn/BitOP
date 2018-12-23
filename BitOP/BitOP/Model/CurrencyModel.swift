@@ -19,7 +19,6 @@ struct CurrencyModel {
     var isFrozen            : String?
     var high24hr            : String?
     var low24hr             : String?
-    
     func currency()-> String {
         return CurrencyName.shared.currencyNameForID(id:self.id)
     }
