@@ -51,7 +51,6 @@ class BitOPRegisterVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.initRegisterUI()
         // Do any additional setup after loading the view.
         self.hideKeyboard()
     }
@@ -76,9 +75,9 @@ class BitOPRegisterVC: UIViewController {
     func initRegisterUI()
     {
 
-         self.regHeadContainerViewOutlet.roundedAllCorner()
-         self.regMasterContainerViewOutlet.roundedAllCorner()
-         self.regBtnHolderViewOutlet.roundedAllCorner()
+        self.regHeadContainerViewOutlet.roundedAllCorner()
+        self.regMasterContainerViewOutlet.roundedAllCorner()
+        self.regBtnHolderViewOutlet.roundedAllCorner()
         
         self.regNameTxtFieldOutlet.layer.borderWidth = CGFloat(APP_MAIN_TEXTFIELD_BORDER_WIDTH)
         self.regUserNameTxtFieldOutlet.layer.borderWidth = CGFloat(APP_MAIN_TEXTFIELD_BORDER_WIDTH)
@@ -156,7 +155,6 @@ class BitOPRegisterVC: UIViewController {
         }
         return false
     }
-    
     // MARK: - Button Action
     
     @IBAction func regCancelBtnAction(_ sender: Any) {
@@ -176,7 +174,6 @@ class BitOPRegisterVC: UIViewController {
                 self.performSegue(withIdentifier: "regToLoginSegue", sender: nil)
             }
         }
-        
     }
     @IBAction func cancel(_ sender: Any) {
         dismiss(animated: true, completion: nil)
