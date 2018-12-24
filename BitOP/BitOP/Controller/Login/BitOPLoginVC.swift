@@ -17,19 +17,12 @@ class BitOPLoginVC: UIViewController, UITextFieldDelegate {
     
     
     @IBOutlet weak var loginHeadContainerViewOutlet: UIView!
-    
     @IBOutlet weak var loginMasterContainerViewOutlet: UIView!
-    
     @IBOutlet weak var loginBottomContainerViewOutet: UIView!
-    
     @IBOutlet weak var loginUserNameTxtFieldOutlet: UITextField!
-    
     @IBOutlet weak var loginPassTxtFieldOutlet: UITextField!
-    
     @IBOutlet weak var loginCancelBtnOutlet: UIButton!
-    
     @IBOutlet weak var loginBtnOutet: UIButton!
-    
     @IBOutlet weak var loginRegBtnOutlet: UIButton!
     
     
