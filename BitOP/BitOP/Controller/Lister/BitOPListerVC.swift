@@ -14,13 +14,9 @@ import Alamofire
 class BitOPListerVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var themeSwitcherSegControlOutlet: UISegmentedControl!
-    
     @IBOutlet weak var signOutBtnOutlet: UIButton!
-    
     @IBOutlet weak var traderNoBtnOutlet: UIButton!
-    
     @IBOutlet weak var traderNoTxtFieldOutlet: UITextField!
-    
     @IBOutlet weak var tradeListerTableViewOutlet: UITableView!
     
     var currentTheme: BitOPColorTheme? {
@@ -33,11 +29,9 @@ class BitOPListerVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         self.tradeListerTableViewOutlet.delegate = self
         self.tradeListerTableViewOutlet.dataSource = self
-        
-        //debugPrint("Stock View VC loaded")
+    
         currentTheme = BitOPColorTheme(backgroundColor: UIColor.black,foregroundColor: UIColor.white)
         self.hideKeyboard()
     }
