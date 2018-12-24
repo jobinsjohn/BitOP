@@ -90,7 +90,6 @@ class BitOPListerVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     }
     
     // MARK: - Button Action
-    
     @IBAction func signOutBtnAction(_ sender: Any) {
         BitOPPoloniexService.shared.unsubscribe(self)
         let banner = StatusBarNotificationBanner(title: "Signed Out", style: .info)
@@ -131,14 +130,14 @@ class BitOPListerVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         return currenciesListObj.count
     }
     
-     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let scripCell = tableView.dequeueReusableCell(withIdentifier: "traderCellID", for: indexPath) as? BitOPListerTableViewCell
         //let cell = tableView.dequeueReusableCell(withIdentifier: "traderCellID") as? BitOPListerTableViewCell
         let scrip = Array(currenciesListObj.values).sorted{$0.id<$1.id}[indexPath.row]
         scripCell?.configure(with: scrip, numberToCompare: comparisonNumber, colorTheme:currentTheme)
         return scripCell!
-     }
+    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 30.0;
@@ -155,7 +154,6 @@ class BitOPListerVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         // Pass the selected object to the new view controller.
     }
     */
-
 }
 extension BitOPListerVC : BitPoloniexServiceListenerProtocol {
     func receivedUpdates(_ scrip: CurrencyModel) {
