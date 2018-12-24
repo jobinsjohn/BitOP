@@ -42,8 +42,7 @@ class BitOPListerVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
             print("Yes! internet is available.")
             BitOPPoloniexService.shared.subscribe(self)
         }
-        else
-        {
+        else{
             let banner = StatusBarNotificationBanner(title: "No Network Connection", style: .danger)
             banner.dismiss()
             banner.show()
