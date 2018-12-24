@@ -25,7 +25,6 @@ class BitOPLoginVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var loginBtnOutet: UIButton!
     @IBOutlet weak var loginRegBtnOutlet: UIButton!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -50,7 +49,6 @@ class BitOPLoginVC: UIViewController, UITextFieldDelegate {
     }
     
     // MARK: - UI functions
-    
     func initLoginViewUI()
     {
         self.loginHeadContainerViewOutlet.roundedAllCorner()
