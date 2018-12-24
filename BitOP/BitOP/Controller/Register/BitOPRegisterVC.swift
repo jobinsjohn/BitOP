@@ -42,7 +42,7 @@ class BitOPRegisterVC: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         if Connectivity.isConnectedToInternet {
-            print("Yes! internet is available.")
+            debugPrint("Yes! internet is available.")
         }
         else
         {
