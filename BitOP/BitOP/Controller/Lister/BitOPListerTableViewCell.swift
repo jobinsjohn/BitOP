@@ -18,7 +18,6 @@ class BitOPListerTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        debugPrint("Stock View Table loaded")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
