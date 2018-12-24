@@ -37,6 +37,7 @@ class BitOPListerTableViewCell: UITableViewCell {
 
         volumeTradedLblOutlet.text = scrip.quoteVolume
         volumeTradedLblOutlet.textColor = colorTheme?.foregroundColor
+        
         if let anumber = number {
             if Double(scrip.lastTradePrice!) ?? 0 < anumber {
                 traderRateImgViewOutlet.image = UIImage(named: "ScripRateDown")
