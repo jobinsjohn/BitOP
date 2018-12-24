@@ -157,7 +157,6 @@ class BitOPRegisterVC: UIViewController {
     // MARK: - Delegates
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
         let textTag = textField.tag+1
         let nextResponder = textField.superview?.viewWithTag(textTag) as UIResponder?
         if(nextResponder != nil)
