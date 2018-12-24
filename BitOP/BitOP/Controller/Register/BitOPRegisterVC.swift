@@ -60,7 +60,6 @@ class BitOPRegisterVC: UIViewController {
     
     func initRegisterUI()
     {
-
         self.regHeadContainerViewOutlet.roundedAllCorner()
         self.regMasterContainerViewOutlet.roundedAllCorner()
         self.regBtnHolderViewOutlet.roundedAllCorner()
@@ -94,29 +93,19 @@ class BitOPRegisterVC: UIViewController {
         self.regEmailTxtFieldOutlet.paddingLeft = CGFloat(APP_MAIN_TEXTFIELD_PLACEHOLDER_LEFT_PADDING)
         self.regPassTxtFieldOutlet.paddingLeft = CGFloat(APP_MAIN_TEXTFIELD_PLACEHOLDER_LEFT_PADDING)
         self.regConfirmPassTxtFieldOutlet.paddingLeft = CGFloat(APP_MAIN_TEXTFIELD_PLACEHOLDER_LEFT_PADDING)
-        
     }
     
     func clearRegFieldValues()
     {
         self.regNameTxtFieldOutlet.text = ""
-        
         self.regUserNameTxtFieldOutlet.text = ""
-        
         self.regEmailTxtFieldOutlet.text = ""
-        
         self.regPassTxtFieldOutlet.text = ""
-        
         self.regConfirmPassTxtFieldOutlet.text = ""
-        
         self.regNameErrorLblOutlet.text = ""
-        
         self.regUNameErrorLblOutlet.text = ""
-        
         self.regEmailErrorLabelOutlet.text = ""
-        
         self.regPassErrorLblOutlet.text = ""
-        
         self.regConfirmPassLblOutlet.text = ""
     }
     
