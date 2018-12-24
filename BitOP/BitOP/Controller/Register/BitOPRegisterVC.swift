@@ -19,33 +19,19 @@ import NotificationBannerSwift
 class BitOPRegisterVC: UIViewController {
     
     @IBOutlet weak var regHeadContainerViewOutlet: UIView!
-    
     @IBOutlet weak var regMasterContainerViewOutlet: UIView!
-    
     @IBOutlet weak var regBtnHolderViewOutlet: UIView!
-    
     @IBOutlet weak var regNameTxtFieldOutlet: UITextField!
-    
     @IBOutlet weak var regUserNameTxtFieldOutlet: UITextField!
-    
     @IBOutlet weak var regEmailTxtFieldOutlet: UITextField!
-    
     @IBOutlet weak var regPassTxtFieldOutlet: UITextField!
-    
     @IBOutlet weak var regConfirmPassTxtFieldOutlet: UITextField!
-    
     @IBOutlet weak var regCancelBtnOutlet: UIButton!
-    
     @IBOutlet weak var regRegisterBtnOutlet: UIButton!
-    
     @IBOutlet weak var regNameErrorLblOutlet: UILabel!
-    
     @IBOutlet weak var regUNameErrorLblOutlet: UILabel!
-    
     @IBOutlet weak var regEmailErrorLabelOutlet: UILabel!
-    
     @IBOutlet weak var regPassErrorLblOutlet: UILabel!
-    
     @IBOutlet weak var regConfirmPassLblOutlet: UILabel!
     
     
