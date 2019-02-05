@@ -14,7 +14,7 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift (~> 6.2.0)
   - KeychainAccess (~> 3.1.2)
   - NotificationBannerSwift (~> 1.8.0)
-  - Starscream (~> 3.0.2)
+  - Starscream (~> 3)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -35,6 +35,6 @@ SPEC CHECKSUMS:
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
   Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
 
-PODFILE CHECKSUM: a12cbe25e448e1c0407d737216986cf7fa07eebe
+PODFILE CHECKSUM: 31d8d35fb54ba062e71a0dcc4b07bdab5143b39f
 
 COCOAPODS: 1.5.3
