@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (4.8.0)
+  - Alamofire (4.8.1)
   - IQKeyboardManagerSwift (6.2.0)
   - KeychainAccess (3.1.2)
   - MarqueeLabel/Swift (3.2.0)
@@ -27,7 +27,7 @@ SPEC REPOS:
     - Starscream
 
 SPEC CHECKSUMS:
-  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
   KeychainAccess: b3816fddcf28aa29d94b10ec305cd52be14c472b
   MarqueeLabel: 440a502b91a9179bd98f9fff00ba1150650a1c0e
@@ -37,4 +37,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 31d8d35fb54ba062e71a0dcc4b07bdab5143b39f
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0
