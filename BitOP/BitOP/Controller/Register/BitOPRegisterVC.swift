@@ -183,6 +183,7 @@ class BitOPRegisterVC: UIViewController {
     */
 
 }
+
 extension UIViewController {
     @discardableResult
     func alert(title:String?,message:String?,actionTitle:String?,cancelTitle:String?,success:(((Bool)->Void)?))->UIAlertController {
@@ -205,6 +206,7 @@ extension UIViewController {
         return alertController
     }
 }
+
 extension String {
     var isValidEmail : Bool {
         get {
