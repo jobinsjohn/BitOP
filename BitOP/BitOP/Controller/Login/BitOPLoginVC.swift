@@ -12,9 +12,7 @@ import KeychainAccess
 import Alamofire
 import NotificationBannerSwift
 
-
 class BitOPLoginVC: UIViewController, UITextFieldDelegate {
-    
     
     @IBOutlet weak var loginHeadContainerViewOutlet: UIView!
     @IBOutlet weak var loginMasterContainerViewOutlet: UIView!
@@ -32,6 +30,7 @@ class BitOPLoginVC: UIViewController, UITextFieldDelegate {
         self.loginUserNameTxtFieldOutlet.delegate       = self
         self.hideKeyboard()
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         if Connectivity.isConnectedToInternet {
             print("Yes! internet is available.")
@@ -67,6 +66,7 @@ class BitOPLoginVC: UIViewController, UITextFieldDelegate {
         self.loginPassTxtFieldOutlet.paddingLeft = CGFloat(APP_MAIN_TEXTFIELD_PLACEHOLDER_LEFT_PADDING)
         
     }
+    
     func clearLoginFieldValues()
     {
         self.loginPassTxtFieldOutlet.text = ""
