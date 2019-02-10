@@ -29,6 +29,7 @@ extension UIView{
         maskLayer1.path = maskPath1.cgPath
         layer.mask = maskLayer1
     }
+    
     func roundedBottomLeft(){
         let maskPath1 = UIBezierPath(roundedRect: bounds,
                                      byRoundingCorners: [.bottomLeft],
@@ -38,6 +39,7 @@ extension UIView{
         maskLayer1.path = maskPath1.cgPath
         layer.mask = maskLayer1
     }
+    
     func roundedBottomRight(){
         let maskPath1 = UIBezierPath(roundedRect: bounds,
                                      byRoundingCorners: [.bottomRight],
@@ -47,6 +49,7 @@ extension UIView{
         maskLayer1.path = maskPath1.cgPath
         layer.mask = maskLayer1
     }
+    
     func roundedBottom(){
         let maskPath1 = UIBezierPath(roundedRect: bounds,
                                      byRoundingCorners: [.bottomRight , .bottomLeft],
